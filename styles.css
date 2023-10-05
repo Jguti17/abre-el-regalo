@@ -1,0 +1,118 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color:darkslategrey;
+    overflow: hidden;
+    font-family: sans-serif;
+}
+
+.gitfcontainer{
+    position: relative;
+}
+
+.gitfcontainer::before{
+    content: '';
+    position: absolute;
+    width: 170px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    top: 112px;
+    left: -10px;
+}
+
+.gitf{
+    position: absolute;
+    width: 150px;
+    height: 120px;
+    background-color: rgb(255, 189, 103);
+}
+
+.gitf::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 120px;
+    background-color: brown;
+    left: 62px;
+
+}
+
+.gitf::after{
+    content: '';
+    position: absolute;
+    box-shadow:inset 0 10px rgba(0, 0, 0, 0.3);
+    width: 150px;
+    height: 100px;
+}
+
+#click{
+    display: none;
+}
+
+.click{
+    position: absolute;
+    background-color:rgb(255, 189, 103);
+    width: 170px;
+    height: 40px;
+    top: -40px;
+    left: -10px;
+    transform-origin: bottom left;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.click::before{
+    position: absolute;
+    content: '';
+    width: 25px;
+    height: 40px;
+    background-color: brown;
+    left: 72px;
+}
+
+.click::after{
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 0;
+    border-bottom: 30px solid brown;
+    border-top: 30px solid brown;
+    border-left: 0px solid transparent;
+    border-right: 30px solid transparent;
+    transform: rotate(-90deg);
+    left: 65px;
+    top: -47px;
+
+}
+
+#click:checked+.click{
+    transform: rotate(-110deg) scale(0.85);
+}
+
+#click:checked~.wishes{
+    transform: translateY(-120px);
+}
+
+.wishes{
+    position: absolute;
+    transition: .5s;
+    color: #333;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    z-index: -1;
+    left: 10px;
+    color: aliceblue;
+    text-shadow: 0 0 10px black;
+}
+
+.tarjeta{
+    background-color: white ;
+}
+img{
+    width: 45px;
+    padding: 3px;
+}
